@@ -2,10 +2,11 @@
     --side-padding: max(100px, 12.5vw, env(safe-area-inset-left), env(safe-area-inset-right));
     --top-padding: max(100px, env(safe-area-inset-top), env(safe-area-inset-bottom));
     --bottom-padding: min(env(safe-area-inset-bottom), 100px);
-    --standard-color: #2C373F;
+    --standard-color: rgb(44, 55, 63);
     --highlight-color: white;
-    --background-color: #2D6FA9;
-    --faint-color: #4784C6;
+    --bold-color: rgb(49, 60, 71);
+    --background-color: rgb(45, 111, 169);
+    --faint-color: rgb(71, 132, 198);
     
 }
 
@@ -30,6 +31,8 @@ section {
     padding-right: var(--side-padding);
     box-sizing: border-box;
     min-height: 50vh;
+    padding-bottom: 100px;
+    z-index: 1;
 }
 
 section:last-of-type {
@@ -42,15 +45,21 @@ h1 {
 
 h2 {
     text-align: center;
+    font-size: 16px;
+    color: var(--highlight-color);
 }
 
 h3 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 40px;
+    color: var(--bold-color);
 }
 
 h3 a {
     text-decoration: none;
+    font-size: 30px;
+    color: var(--bold-color);
 }
 
 #intro-section {
@@ -95,6 +104,52 @@ h3 a {
     border-radius: 3px;
     margin-right: 10px;
     font-size: 16px;
+}
+
+
+#navBar {
+    width: 100vw;
+    height: 70px;
+    background-color: blue;
+    position: fixed;
+    z-index: 2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0px -20px 30px black;
+    overflow: hidden;
+    background: rgba(45, 111, 169, 0.7);
+}
+
+@supports (backdrop-filter: none) {
+  #navBar {
+      background: rgba(45, 111, 169, 0.3);
+      backdrop-filter: blur(8px);
+  }
+}
+
+@supports (-webkit-backdrop-filter: none) {
+  #navBar {
+      background: rgba(45, 111, 169, 0.3);
+      -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+#navBar a {
+    position: relative;
+    padding: 10px;
+    color: var(--highlight-color);
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#navBar .downloadBtn {
+    padding: 10px;
+    color: var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+    border-radius: 3px;
 }
 
 .detailsWrapper {

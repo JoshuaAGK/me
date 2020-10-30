@@ -123,6 +123,30 @@ h3 a {
     background: rgba(45, 111, 169, 0.7);
 }
 
+#sideNav {
+    width: var(--side-padding);
+    height: auto;
+    position: fixed;
+    z-index: 3;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sideNav path {
+    fill: var(--bold-color);
+}
+
+#sideNav a:hover path {
+    fill: var(--highlight-color);
+}
+
+#sideNav a {
+    width: 1.5em;
+    margin-top: 20px;
+}
+
 @supports (backdrop-filter: none) {
   #navBar {
       background: rgba(45, 111, 169, 0.3);

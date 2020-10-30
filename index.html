@@ -2,15 +2,158 @@
 <html lang="en-gb">
     <head>
         <title>Me</title>
-        <meta name="description" content="Josh">
+        <meta name="description" content="Me">
         <meta name="author" content="Joshua Kelley">
         <link rel="icon" href="favicon.png" sizes="any" type="image/png">
         <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
         <script src="code.js"></script>
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
-    <body onload="onloadfunc()">
-        <h1>Yeet</h1>
+    <body>
+        <div id="leftSideNav"></div>
+        <div id="rightSideNav"></div>
+        <section class="document-section" id="intro-section">
+            <h1>Hello, my name is</h1>
+            <h2>Joshua Kelley</h2>
+            <h3>Software Engineering Student</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum. Phasellus lectus felis, fringilla id semper maximus, bibendum ac tellus.</p>
+            <a>Contact</a>
+            <a>CV</a>
+        </section>
+        <section class="document-section" id="about-section">
+            <h2>About Me</h2>
+            <h3>Please allow me to introduce myself<a href="https://genius.com/The-rolling-stones-sympathy-for-the-devil-lyrics">.</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum. Phasellus lectus felis, fringilla id semper maximus, bibendum ac tellus.</p>
+            <div class="detailsWrapper">
+                <div>
+                    <h4>Details</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                    <h5>Name</h5>
+                    <p>Joshua AG Kelley</p>
+                    <h5>Birthday</h5>
+                    <time datetime="2000-08-08">8th August, 2000</time>
+                    <h5>Email</h5>
+                    <a href="mailto:JoshuaAGKelley@gmail.com">JoshuaAGKelley@gmail.com</a>
+                </div>
+                <div>
+                    <h4>Skills</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                </div>
+            </div>
+        </section>
+        <section class="document-section" id="experience-section">
+            <h2>Experience & Education</h2>
+            <h3>See what I've done now<a href="https://genius.com/Passion-pit-cry-like-a-ghost-lyrics">.</a></h3>
+            <div class="detailsWrapper">
+                <div>
+                    <h4>Experience</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                    <ul>
+                        <li>
+                            <div class="education-left">
+                                <h6>Freelance</h6>
+                                <p><time datetime="2018-07">July 2018</time> - Present</p>
+                            </div>
+                            <div class="education-right">
+                                <h6>Full-Stack Web Development</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-left">
+                                <h6>2xStream</h6>
+                                <p><time datetime="2018-11">November 2018</time> - <time datetime="2020-08">August 2020</time></p>
+                            </div>
+                            <div class="education-right">
+                                <h6>Volunteer</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-left">
+                                <h6>Tri Catering Equipment</h6>
+                                <p><time datetime="2014-08">August 2014</time> - <time datetime="2018-07">July 2018</time></p>
+                            </div>
+                            <div class="education-right">
+                                <h6>IT Support Technician</h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Education</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                    <ul>
+                        <li>
+                            <div class="education-left">
+                                <h6>BSc (Hons) Software Engineering</h6>
+                                <p><time datetime="2019-09">September 2019</time> - Present</p>
+                            </div>
+                            <div class="education-right">
+                                <h6><a href="https://www.bournemouth.ac.uk/">Bournemouth University</a></h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-left">
+                                <h6>BTEC Level 3 Diploma in IT</h6>
+                                <p><time datetime="2016-09">September 2016</time> - <time datetime="2019-06">June 2019</time></p>
+                            </div>
+                            <div class="education-right">
+                                <h6><a href="https://www.weymouth.ac.uk/">Weymouth College</a></h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="education-left">
+                                <h6>GCSEs</h6>
+                                <p><time datetime="2013-09">September 2013</time> - <time datetime="2016-06">June 2016</time></p>
+                            </div>
+                            <div class="education-right">
+                                <h6><a href="http://www.thomas-hardye.dorset.sch.uk/">The Thomas Hardye School</a></h6>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget lacinia leo. Sed ac tortor nec ex accumsan dignissim at vitae ipsum.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="document-section" id="experience-section">
+            <h2>Projects</h2>
+            <h3>These are a few of my favourite things<a href="https://genius.com/Julie-andrews-my-favorite-things-lyrics">.</a></h3>
+        </section>
+        <section class="document-section" id="contact-section">
+            <h2>Contact&nbsp;Me</h2>
+            <h3>Dial up my number<a href="https://genius.com/Goldfrapp-ooh-la-la-lyrics">.</a></h3>
+            <ul>
+                <li>
+                    <h4>Find me</h4>
+                    <address>
+                        23&nbsp;Egdon&nbsp;Glen<br>
+                        Crossways<br>
+                        Dorchester<br>
+                        Dorset<br>
+                        DT2&nbsp;8BQ<br>
+                        United&nbsp;Kingdom
+                    </address>
+                </li>
+                <li>
+                    <h4>Email</h4>
+                    <a href="mailto:JoshuaAGKelley@gmail.com">JoshuaAGKelley@gmail.com</a>
+                </li>
+                <li>
+                    <h4>Phone</h4>
+                    <a href="tel:+447920056795">07920&nbsp;056&nbsp;795</a>
+                </li>
+                <li>
+                    <h4>Discord</h4>
+                    <a>Joshki#0428</a>
+                </li>
+            </ul>
+        </section>
     </body>
 </html>

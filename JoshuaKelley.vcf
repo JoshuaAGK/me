@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Joshua Kelley
+N:Kelley;Joshua;;;
+GENDER:M
+BDAY:20000808
+TITLE:Student
+ROLE:Student
+ORG:Bournemouth University
+EMAIL;type=Home,INTERNET:JoshuaAGKelley@gmail.com
+EMAIL;type=University,INTERNET:s5208752@bournemouth.ac.uk
+TEL;TYPE=IPHONE;TYPE=CELL;TYPE=VOICE:07920056795
+ADR;TYPE=HOME:;;;Dorchester;Dorset;;United Kingdom
+URL:https://joshuaagk.github.io/me
+item5.IMPP;X-SERVICE-TYPE=Discord;type=pref:x-apple:Joshki%230428
+item5.X-ABLabel:Discord
+END:VCARD

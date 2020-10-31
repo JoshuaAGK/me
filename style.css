@@ -301,6 +301,37 @@ h3 a {
     font-size: 16px;
 }
 
+#sugmaknuts {
+    display: grid;
+    grid-template-columns: calc(50% - 30px) 60px calc(50% - 30px);
+    grid-template-rows: auto 30px auto;
+}
+
+#sugmaknuts > div:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#sugmaknuts > div:nth-of-type(2) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#sugmaknuts > div:nth-of-type(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#sugmaknuts > div:nth-of-type(4) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
 
 .education-left {
     text-align: right;
@@ -322,6 +353,10 @@ h3 a {
 }
 
 #about-section a {
+    font-size: 16px;
+}
+
+#experience-section p, #experience-section time {
     font-size: 16px;
 }
 

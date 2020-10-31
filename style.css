@@ -1,7 +1,5 @@
 :root {
-    --side-padding: max(100px, 12.5vw, env(safe-area-inset-left), env(safe-area-inset-right));
-    --top-padding: max(100px, env(safe-area-inset-top), env(safe-area-inset-bottom));
-    --bottom-padding: min(env(safe-area-inset-bottom), 100px);
+    --side-padding: max(100px, 12.5vw);
        
     --dark-color: rgb(45, 111, 169);
     --medium-color: rgb(71, 132, 198);
@@ -24,6 +22,7 @@ body {
     flex-direction: column;
     align-items: stretch;
     background-color: var(--light-color);
+    overflow-x: hidden;
 }
 
 section {
@@ -103,12 +102,14 @@ hr {
 }
 
 #intro-section {
-    padding-top: 200px;
+    padding-top: 20vh;
     height: 100vh;
 }
 
 #intro-section h2, #intro-section h3 {
     text-align: left;
+    font-size: 200%;
+    font-weight: 600;
 }
 
 #intro-section h3 {
@@ -116,8 +117,11 @@ hr {
 }
 
 #intro-section p {
-    font-size: 20px;
+    font-size: min(1.5vw, 18px);
+    font-weight: 400;
+    max-width: 500px;
 }
+
 
 #meInfo {
     position: relative;
@@ -170,15 +174,8 @@ hr {
     color: var(--text-color);
 }
 
-#intro-section h2, #intro-section h3 {
-    font-size: 80px;
-    font-weight: 600;
-}
 
-#intro-section p {
-    font-weight: 400;
-    max-width: 500px;
-}
+
 
 .sub-link {
     position: relative;
@@ -188,7 +185,7 @@ hr {
     border: 1px solid var(--light-color);
     border-radius: 3px;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: min(1.5vw, 16px);
     text-decoration: none;
 }
 
@@ -200,7 +197,7 @@ hr {
     width: 2em;
     height: 2em;
     position: absolute;
-    bottom: 100px;
+    bottom: 7.5vh;
     left: 50%;
     transform: translate(-50%, 0);
     border: none;
@@ -218,7 +215,7 @@ hr {
 
 #navBar {
     width: 100vw;
-    height: 70px;
+    height: 3rem;
     position: fixed;
     z-index: 2;
     box-sizing: border-box;
@@ -286,6 +283,7 @@ hr {
     color: var(--light-color);
     border: 1px solid var(--light-color);
     border-radius: 3px;
+    margin-right: 30px;
 }
 
 #skillsList {
@@ -650,7 +648,7 @@ ul {
         color: var(--accent-color);
     }
     
-    #intro-section a {
+    .sub-link {
         color: var(--accent-color);
         border: 1px solid var(--accent-color);
     }
@@ -662,4 +660,91 @@ ul {
     #navBar a:hover {
         background-color: rgba(var(--accent-values), 0.1);
     }
+}
+
+/*Compact*/
+@media only screen and (max-width: 1024px) {
+    #sugmaknuts {
+        display: grid;
+        grid-template-columns: calc(50% - 30px) 60px calc(50% - 30px);
+        grid-template-rows: auto 30px auto 30px auto 30px auto;
+    }
+    
+    #sugmaknuts > div:nth-of-type(1) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    #sugmaknuts > div:nth-of-type(2) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    #sugmaknuts > div:nth-of-type(3) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    #sugmaknuts > div:nth-of-type(4) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+}
+
+@media only screen and (max-width: 924px) {
+    :root {
+        --side-padding: max(12px, env(safe-area-inset-right));
+    }
+    
+    #sideNav {
+        display: none;
+    }
+    
+    #projects-section ul:nth-of-type(2) {
+        max-width: 842px;
+        width: 100%;
+    }
+    
+    .project-large-image {
+        width: calc(300px/9*16);
+        float: left;
+        margin: 0;
+        position: relative;
+        clear: both;
+    }
+    
+    
+    .project-large:nth-child(even) .project-large-cover {
+/*
+        margin: 0;
+        left: 0;
+        text-align: left;
+        float: left;
+        clear: both;
+        top: 0;
+*/
+    }
+
+    .project-large-cover, .project-large:nth-child(even) .project-large-cover {
+        all: initial;
+/*
+        min-width: 0;
+        max-width: 100vw;
+        text-align: left;
+        left: 0;
+        margin: 0;
+*/
+        background-color: green;
+    }
+    
+    .project-large-cover, .project-large:nth-child(even) .project-large-cover {
+        
+    }
+    
+    
 }

@@ -497,7 +497,7 @@ ul {
     }
     
     section:first-of-type {
-        background-image: linear-gradient(var(--dark-color), var(--dark-color) 80%, var(--medium-color));
+        background-image: linear-gradient(var(--dark-color), var(--medium-color));
     }
     
     #sideNav a:hover path {

@@ -80,6 +80,10 @@ h3 a {
     color: var(--text-color);
 }
 
+address {
+    font-style: normal;
+}
+
 .txt-high {
     color: var(--accent-color);
 }
@@ -312,8 +316,11 @@ h3 a {
 }
 
 .detailsWrapper ul {
-    list-style: none;
     width: 100%;
+}
+
+ul {
+    list-style: none;
 }
 
 .detailsWrapper p, .detailsWrapper time {
@@ -428,7 +435,22 @@ h3 a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+}
+
+#contact-section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#contact-section li {
+    padding: 10px;
+    margin: 20px 10px 20px 10px;
 }
 
 .education-image svg {

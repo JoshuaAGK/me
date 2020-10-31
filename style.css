@@ -162,7 +162,7 @@ h3 a {
     max-width: 500px;
 }
 
-#intro-section a {
+.sub-link {
     position: relative;
     top: 30px;
     padding: 10px;
@@ -174,7 +174,26 @@ h3 a {
     text-decoration: none;
 }
 
-#intro-section a:hover {
+.sub-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#downArrow {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: none;
+    border-radius: 999px;
+}
+
+#downArrow svg {
+    fill: var(--light-color);
+}
+
+#downArrow:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -432,6 +451,14 @@ h3 a {
     
     body {
         background-color: var(--dark-color);
+    }
+
+    #downArrow svg {
+        fill: var(--accent-color);
+    }
+
+    #downArrow:hover {
+        background-color: rgba(var(--accent-values), 0.1);
     }
     
     #navBar {

@@ -2,19 +2,20 @@
     --side-padding: max(100px, 12.5vw, env(safe-area-inset-left), env(safe-area-inset-right));
     --top-padding: max(100px, env(safe-area-inset-top), env(safe-area-inset-bottom));
     --bottom-padding: min(env(safe-area-inset-bottom), 100px);
-    --standard-color: rgb(44, 55, 63);
-    --highlight-color: black;
-    --bold-color: rgb(49, 60, 71);
-    --background-color: rgb(45, 111, 169);
-    --faint-color: rgb(71, 132, 198);
-    
+       
+    --dark-color: rgb(45, 111, 169);
+    --medium-color: rgb(71, 132, 198);
+    --light-color: white;
+    --accent-color: rgb(71, 132, 198);
+    --accent-values: 45, 111, 169;
+    --text-color: black;
 }
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'IBM Plex Sans', sans-serif;
-    color: var(--standard-color);
+    color: var(--text-color);
     font-size: 20px;
 }
 
@@ -22,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    background-color: var(--light-color);
 }
 
 section {
@@ -36,7 +38,7 @@ section {
 }
 
 section:first-of-type {
-    background-image: linear-gradient(var(--background-color), var(--faint-color));
+    background-image: linear-gradient(var(--dark-color), var(--medium-color));
 }
 
 section:last-of-type {
@@ -50,22 +52,21 @@ h1 {
 h2 {
     text-align: center;
     font-size: 16px;
-    color: var(--highlight-color);
+    color: var(--accent-color);
 }
 
 h3 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 40px;
-    color: var(--bold-color);
+    color: var(--text-color);
 }
 
-h4 {
-    color: var(--highlight-color);
+h4, h5 {
+    color: var(--accent-color);
 }
 
 h5 {
-    color: var(--bold-color);
     font-size: 16px;
 }
 
@@ -73,18 +74,14 @@ p, abbr {
     font-size: 16px;
 }
 
-b {
-    color: var(--bold-color);
-}
-
 h3 a {
     text-decoration: none;
     font-size: 30px;
-    color: var(--bold-color);
+    color: var(--text-color);
 }
 
 .txt-high {
-    color: var(--highlight-color);
+    color: var(--accent-color);
 }
 
 #intro-section {
@@ -94,6 +91,10 @@ h3 a {
 
 #intro-section h2, #intro-section h3 {
     text-align: left;
+}
+
+#intro-section h3 {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 #intro-section p {
@@ -148,7 +149,7 @@ h3 a {
 }
 
 #intro-section h2 {
-    color: var(--highlight-color);
+    color: var(--text-color);
 }
 
 #intro-section h2, #intro-section h3 {
@@ -165,18 +166,22 @@ h3 a {
     position: relative;
     top: 30px;
     padding: 10px;
-    color: var(--highlight-color);
-    border: 1px solid var(--highlight-color);
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
     border-radius: 3px;
     margin-right: 10px;
     font-size: 16px;
+    text-decoration: none;
+}
+
+#intro-section a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 
 #navBar {
     width: 100vw;
     height: 70px;
-    background-color: blue;
     position: fixed;
     z-index: 2;
     box-sizing: border-box;
@@ -186,7 +191,7 @@ h3 a {
     justify-content: flex-end;
     box-shadow: 0px -20px 30px black;
     overflow: hidden;
-    background: rgba(45, 111, 169, 0.7);
+    background-color: rgba(var(--accent-values), 0.8);
 }
 
 #sideNav {
@@ -201,11 +206,11 @@ h3 a {
 }
 
 #sideNav path {
-    fill: var(--bold-color);
+    fill: var(--text-color);
 }
 
 #sideNav a:hover path {
-    fill: var(--highlight-color);
+    fill: var(--dark-color);
 }
 
 #sideNav a {
@@ -215,14 +220,12 @@ h3 a {
 
 @supports (backdrop-filter: none) {
   #navBar {
-      background: rgba(45, 111, 169, 0.3);
       backdrop-filter: blur(8px);
   }
 }
 
 @supports (-webkit-backdrop-filter: none) {
   #navBar {
-      background: rgba(45, 111, 169, 0.3);
       -webkit-backdrop-filter: blur(8px);
   }
 }
@@ -230,16 +233,21 @@ h3 a {
 #navBar a {
     position: relative;
     padding: 10px;
-    color: var(--highlight-color);
+    color: var(--light-color);
     margin-right: 10px;
     font-size: 16px;
     text-align: center;
+    text-decoration: none;
+}
+
+#navBar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #navBar .downloadBtn {
     padding: 10px;
-    color: var(--highlight-color);
-    border: 1px solid var(--highlight-color);
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
     border-radius: 3px;
 }
 
@@ -252,7 +260,7 @@ h3 a {
 
 #skillsList li {
     font-size: 18px;
-    border: 1px solid var(--faint-color);
+    border: 1px solid var(--accent-color);
     width: auto;
     margin: 15px;
     padding: 10px;
@@ -310,7 +318,7 @@ h3 a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(var(--bold-color), var(--bold-color)) no-repeat center/2px 100%;
+    background: linear-gradient(var(--medium-color), var(--medium-color)) no-repeat center/2px 100%;
 }
 
 #about-section a {
@@ -353,8 +361,8 @@ h3 a {
     height: 50px;
     border-radius: 999px;
     box-sizing: border-box;
-    border: 1px solid var(--highlight-color);
-    background-color: var(--faint-color);
+    border: 1px solid var(--accent-color);
+    background-color: var(--medium-color);
     background-color: white;
     overflow: hidden;
 }
@@ -370,10 +378,62 @@ h3 a {
 }
 
 .education-image svg {
-    fill: var(--highlight-color);
+    fill: var(--accent-color);
     top: calc(50% + 4px);
     max-height: 120%;
     max-width: 120%;
     width: 120%;
     height: 120%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {   
+        --dark-color: rgb(26, 26, 26);
+        --medium-color: rgb(51, 51, 51);
+        --accent-color: rgb(80, 144, 205);
+        --accent-values: 80, 144, 205;
+        --text-color: white;
+    }
+    
+    body {
+        background-color: var(--dark-color);
+    }
+    
+    #navBar {
+        background-color: rgba(var(--accent-values), 0.3);
+    }
+
+    #navBar a {
+        color: var(--text-color);
+    }
+    
+    #navBar .downloadBtn {
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+    }
+    
+    section:first-of-type {
+        background-image: linear-gradient(var(--dark-color), var(--dark-color) 80%, var(--medium-color));
+    }
+    
+    #sideNav a:hover path {
+        fill: var(--accent-color);
+    }
+    
+    #intro-section h3 {
+        color: var(--accent-color);
+    }
+    
+    #intro-section a {
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+    }
+    
+    #intro-section a:hover {
+        background-color: rgba(var(--accent-values), 0.1);
+    }
+    
+    #navBar a:hover {
+        background-color: rgba(var(--accent-values), 0.1);
+    }
 }

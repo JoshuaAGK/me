@@ -751,6 +751,10 @@ ul {
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
     }
     
+    .project-large * {
+        color: var(--text-color);
+    }
+    
     .project-large:not(:first-of-type) .project-large-cover {
         margin-top: 50px;
     }

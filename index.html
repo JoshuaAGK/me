@@ -17,29 +17,28 @@
         <script src="code.js"></script>
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
-    <body onresize="console.log(window.innerWidth)">
+    <body>
         <div id="sideNav" role="banner">
-            <a href="https://github.com/JoshuaAGK" role="link">
-                <svg viewBox="0 0 16 16">
-                    <title>GitHub</title>
+            <a href="https://github.com/JoshuaAGK" title="GitHub" role="link">
+                <svg viewBox="0 0 16 16" alt="GitHub Logo Link">
                     <path fill-rule="evenodd" fill="black" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/joshuaagkelley" role="link">
-                <svg viewBox="0 0 48 48">
-                    <title>LinkedIn</title>
+            <a href="https://www.linkedin.com/in/joshuaagkelley" title="LinkedIn" role="link">
+                <svg viewBox="0 0 48 48" alt="LinkedIn Logo Link">
                     <g fill="none" fill-rule="evenodd">
                         <path d="M0 4.01A4.01 4.01 0 014.01 0h39.98A4.01 4.01 0 0148 4.01v39.98A4.01 4.01 0 0143.99 48H4.01A4.01 4.01 0 010 43.99V4.01zM19 18.3h6.5v3.266C26.437 19.688 28.838 18 32.445 18 39.359 18 41 21.738 41 28.597V41.3h-7V30.159c0-3.906-.937-6.109-3.32-6.109-3.305 0-4.68 2.375-4.68 6.109V41.3h-7v-23zM7 41h7V18H7v23zm8-30.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" class="background" fill="black"></path>
                     </g>
                 </svg>
             </a>
+            <a href="#about-section" role="link" tabindex="0">Skip to Content</a>
         </div>
         <nav id="navBar" role="navigation">
             <a href="#about-section" role="link">About</a>
             <a href="#experience-section" role="link">Experience&nbsp;&<br>Education</a>
             <a href="#projects-section" role="link">Projects</a>
             <a href="#contact-section" role="link">Contact</a>
-            <a class="downloadBtn" href="resume_light" download="Josh's Resume" target="_blank" role="link">CV</a>
+            <a class="downloadBtn" href="resume_light" download="Josh's Resume" target="_blank" role="link" title="Opens in a new tab"><abbr title="Curriculum Vitae">CV</abbr></a>
         </nav>
         <section class="document-section" id="intro-section" role="region">
             <h1>Hello, my name is</h1>
@@ -48,9 +47,9 @@
             <p>Freelance developer, student, tech enthusiast, and official nerd.</p>
             <p>If you need high-quality code made, look no further.</p>
             <a class="sub-link" href="#contact-section" role="link">Contact</a>
-            <a class="sub-link" href="resume_light" download="Josh's Resume" target="_blank" role="link">CV</a>
+            <a class="sub-link" href="resume_light" download="Josh's Resume" target="_blank" role="link" title="Opens in a new tab"><abbr title="Curriculum Vitae">CV</abbr></a>
             <a href="#about-section" id="downArrow" role="button">
-                <svg viewBox="0 0 16 16">
+                <svg viewBox="0 0 16 16" alt="Downwards arrow">
                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                     <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
                 </svg>
@@ -58,7 +57,7 @@
         </section>
         <section class="document-section" id="about-section" role="region">
             <h2>About Me</h2>
-            <h3>Please allow me to introduce myself<a href="https://genius.com/The-rolling-stones-sympathy-for-the-devil-lyrics" target="_blank">.</a></h3>
+            <h3>Please allow me to introduce myself<a href="https://genius.com/The-rolling-stones-sympathy-for-the-devil-lyrics" target="_blank" title="Opens in a new tab">.</a></h3>
             <div id="meInfo">
                 <div id="selfie" role="img">
                     <img src="selfie.png" alt="A photograph of me">
@@ -67,7 +66,7 @@
                     <p class="txt-high">Hello!</p>
                     <br>
                     <p>I am a Bournemouth University undergraduate doing Software Engineering.</p>
-                    <p>My interests are in full-stack web development and creating software solutions to solve problems (and just for fun).</p>
+                    <p>My interests are in <dfn title="Code which runs for the user and on a server">full-stack</dfn> <dfn title="World Wide Web">web</dfn> development and creating software solutions to solve problems (and just for fun).</p>
                     <p>I am actively looking for placements and work opportunities.</p>
                     <p>If you think I might make a good fit, please get in touch!</p>
                 </div>
@@ -84,8 +83,8 @@
                     <time datetime="2000-08-08">8th August, 2000</time>
                     <br><br>
                     <h5>Email</h5>
-                    <a href="mailto:JoshuaAGKelley@gmail.com">JoshuaAGKelley@gmail.com</a><br>
-                    <a href="mailto:s5208752@bournemouth.ac.uk" target="_blank">s5208752@bournemouth.ac.uk</a>
+                    <a href="mailto:JoshuaAGKelley@gmail.com" target="_blank" title="Opens in a new tab">JoshuaAGKelley@gmail.com</a><br>
+                    <a href="mailto:s5208752@bournemouth.ac.uk" target="_blank" title="Opens in a new tab">s5208752@bournemouth.ac.uk</a>
                     <br><br>
                     <h5>Phone</h5>
                     <a href="tel:+447920056795">07920&nbsp;056&nbsp;795</a>
@@ -95,23 +94,58 @@
                     <p>I've gained experience and skills from my work and education.</p>
                     <p>Here are some highlights of my skills!</p>
                     <ul id="skillsList">
-                        <li>HTML, CSS, and JavaScript</li>
-                        <li>Adobe Creative Suite</li>
-                        <li>Back-End API Development</li>
-                        <li>MS Office</li>
-                        <li>Firebase</li>
-                        <li>Technical Support</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                        <li>Python</li>
+                        <li>
+                            <dfn title="Website programming languages">
+                                <abbr title="HyperText Markup Language" role="definition">HTML</abbr>, <abbr title="Cascading Style Sheets" role="definition">CSS</abbr>, and JavaScript
+                            </dfn>
+                        </li>
+                        <li>
+                            <dfn title="Photo and video manipulation software">
+                                Adobe Creative Suite
+                            </dfn>
+                        </li>
+                        <li>
+                            <dfn title="Code which runs on a server">
+                                Back-End <abbr title="Application Programming Interface" role="definition">API</abbr>
+                            </dfn>
+                            Development
+                        </li>
+                        <li>
+                            <dfn title="Software for documents, slideshows, spreadsheets, and more">
+                                <abbr title="Microsoft" role="definition">MS</abbr> Office
+                            </dfn>
+                        </li>
+                        <li>
+                            <dfn title="Internet data storage service">
+                                Firebase
+                            </dfn>
+                        </li>
+                        <li>
+                            Technical Support
+                        </li>
+                        <li>
+                            <dfn title="A programming language that enhances a website's capabilities">
+                                <abbr title="[sic] PHP: Hypertext Processor" role="definition">PHP</abbr>
+                            </dfn>
+                        </li>
+                        <li>
+                            <dfn title="A programming language that interacts with data stores">
+                                <abbr title="Structured Query Language" role="definition">SQL</abbr>
+                            </dfn>
+                        </li>
+                        <li>
+                            <dfn title="A programming language that runs on a computer (including servers)">
+                                Python
+                            </dfn>
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
         <section class="document-section" id="experience-section" role="region">
             <h2>Experience & Education</h2>
-            <h3>See what I've done now<a href="https://genius.com/Passion-pit-cry-like-a-ghost-lyrics" target="_blank">.</a></h3>
-            <div id="sugmaknuts">
+            <h3>See what I've done now<a href="https://genius.com/Passion-pit-cry-like-a-ghost-lyrics" target="_blank" title="Opens in a new tab">.</a></h3>
+            <div id="experienceWrapper">
                 <div>
                     <h4>Experience</h4>
                     <p>These are the places I've worked.</p>
@@ -127,7 +161,7 @@
                             </div>
                             <div class="education-centre">
                                 <div id="freelance-icon" class="education-image">
-                                    <svg viewBox="0 0 16 16">
+                                    <svg viewBox="0 0 16 16" alt="Person silhouette">
                                         <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                                     </svg>
                                 </div>
@@ -163,7 +197,7 @@
                                 </div>
                             </div>
                             <div class="education-right">
-                                <h6>IT Support Technician</h6>
+                                <h6><abbr title="Information technology" role="definition">IT</abbr> Support Technician</h6>
                                 <p>Providing technical support for IT hardware and software, as well as installing IT hardware and software, and commercial hardware for business clients.</p>
                             </div>
                         </li>
@@ -179,7 +213,7 @@
                     <ul>
                         <li>
                             <div class="education-left">
-                                <h6>BSc (Hons) Software Engineering</h6>
+                                <h6><abbr title="Batchelor of Science" role="definition">BSc</abbr> (<abbr title="Honours" role="definition">Hons</abbr>) Software Engineering</h6>
                                 <p><time datetime="2019-09">September 2019</time> - Present</p>
                             </div>
                             <div class="education-centre">
@@ -190,12 +224,12 @@
                             <div class="education-right">
                                 <h6><a href="https://www.bournemouth.ac.uk/">Bournemouth University</a></h6>
                                 <p>Received an Academic Excellence Scholarship.</p>
-                                <p>Achieved Firsts in everything for my first year.</p>
+                                <p>Achieved <dfn title="Marks over 80%">Firsts</dfn> in everything for my first year.</p>
                             </div>
                         </li>
                         <li>
                             <div class="education-left">
-                                <h6>BTEC Level 3 Diploma in IT</h6>
+                                <h6><abbr title="Business and Technology Education Council" role="definition">BTEC</abbr> Level 3 Diploma in IT</h6>
                                 <p><time datetime="2016-09">September 2016</time> - <time datetime="2019-06">June 2019</time></p>
                             </div>
                             <div class="education-centre">
@@ -205,13 +239,13 @@
                             </div>
                             <div class="education-right">
                                 <h6><a href="https://www.weymouth.ac.uk/">Weymouth College</a></h6>
-                                <p>Achieved DDD at level 3.</p>
-                                <p>(Equivalent to AAA at A-Level)</p>
+                                <p>Achieved <abbr title="Triple distinction" role="definition">DDD</abbr> at level 3.</p>
+                                <p>(Equivalent to <abbr title="Three A-grade A-Levels" role="definition">AAA</abbr> at A-Level)</p>
                             </div>
                         </li>
                         <li>
                             <div class="education-left">
-                                <h6>GCSEs</h6>
+                                <h6><abbr title="General Certificate of Secondary Education" role="definition">GCSE</abbr>s</h6>
                                 <p><time datetime="2013-09">September 2013</time> - <time datetime="2016-06">June 2016</time></p>
                             </div>
                             <div class="education-centre">
@@ -230,31 +264,31 @@
         </section>
         <section class="document-section" id="projects-section" role="region">
             <h2>Projects</h2>
-            <h3>These are a few of my favourite things<a href="https://genius.com/Julie-andrews-my-favorite-things-lyrics" target="_blank">.</a></h3>
+            <h3>These are a few of my favourite things<a href="https://genius.com/Julie-andrews-my-favorite-things-lyrics" target="_blank" title="Opens in a new tab">.</a></h3>
             <ul>
                 <li class="project-large">
-                    <div class="project-large-cover">
+                    <div class="project-large-cover" tabindex="0">
                         <h4>Website for Renault</h4>
                         <p>A website I was commissioned to build for Renault to showcase their new electric vehicles.</p>
-                        <p>In addition to the website, I created the real-time live chat, Twitter timeline, and Google Drive integration, with a custom backend API to manage the site.</p>
+                        <p>In addition to the website, I created the real-time live chat, Twitter timeline, and <dfn title="Internet data storage service">Google Drive</dfn> integration, with a custom <dfn title="Code which runs on a server">back-end</dfn> API to manage the site.</p>
                     </div>
                     <div class="project-large-image" role="img">
                         <img src="renault.jpg" alt="The website made for Renault">
                     </div>
                 </li>
                 <li class="project-large">
-                    <div class="project-large-cover">
+                    <div class="project-large-cover" tabindex="0">
                         <h4>Bournemouth University Timetable Downloader</h4>
-                        <p>A Google Chrome extension which injects a script into the timetable viewer webpage, intercepts incoming JSON data, parses that data into a machine-readable calendar format, and downloads it as an .ics file.</p>
+                        <p>A Google Chrome extension which <dfn title="Inserts my own">injects a</dfn> <dfn title="Code">script</dfn> into the timetable viewer web page, intercepts incoming <abbr title="JavaScript Object Notation" role="definition">JSON</abbr> data, <dfn title="Understands">parses</dfn> that data as a machine-readable calendar format, and downloads it as an .<abbr title="Internet Calendaring and Scheduling" role="definition">ics</abbr> file.</p>
                     </div>
                     <div class="project-large-image" role="img">
                         <img src="timetabledownloader.jpg" alt="The Chrome Web Store page of my extension">
                     </div>
                 </li>
                 <li class="project-large">
-                    <div class="project-large-cover">
+                    <div class="project-large-cover" tabindex="0">
                         <h4>Custom Twitter Timeline</h4>
-                        <p>Uses the Twitter API to return data from a Twitter handle, hastag, or search term; then uses that data to build a custom timeline without relying on Twitter's own embeds.</p>
+                        <p>Uses the Twitter API to return data from a Twitter handle, hastag, or search term; then uses that data to build a custom timeline without relying on Twitter's own <dfn title="custom implementation">embeds.</dfn></p>
                         <p>Can be imported into any website with PHP installed.</p>
                     </div>
                     <div class="project-large-image" role="img">
@@ -265,27 +299,27 @@
             <hr>
             <h2>Other Projects</h2>
             <ul>
-                <li class="project-small">
+                <li class="project-small" tabindex="0" onkeydown="keyDown(this)" onkeyup="keyUp(this)">
                     <h3>Showtime</h3>
                     <p>
                         Movie showtime getter
                         <br>
                         <br>
-                        Python scrips for scraping the <a href="https://www.imdb.com/showtimes/">IMDB page</a> for movies at nearby cinemas (such as age ratings and showtimes), then exports as a JSON.
+                        Python script for <dfn title="Reading data off of">scraping</dfn> the <a href="https://www.imdb.com/showtimes/"><abbr title="Internet Movie Database">IMDb</abbr> page</a> for movies at nearby cinemas (such as age ratings and showtimes), then exports as a JSON.
                     </p>
                     <img src="showtime.jpg" alt="A segment of code">
                 </li>
-                <li class="project-small">
+                <li class="project-small" tabindex="0" onkeydown="keyDown(this)" onkeyup="keyUp(this)">
                     <h3>Colour Clock</h3>
                     <p>
                         Displays time as colour
                         <br>
                         <br>
-                        Converts the time of day (HH:MM:SS) to a #hex colour value, and displays the name of the colour.
+                        Converts the time of day (HH:MM:SS) to a #<abbr title="Hexadecimal">hex</abbr> colour value, and displays the name of the colour.
                     </p>
                     <img src="colourclock.jpg" alt="Large text which reads 'It's midnight blue o'clock' on a blue background">
                 </li>
-                <li class="project-small">
+                <li class="project-small" tabindex="0" onkeydown="keyDown(this)" onkeyup="keyUp(this)">
                     <h3>Fridge Magnets</h3>
                     <p>
                         Virtual fridge magnets
@@ -295,7 +329,7 @@
                     </p>
                     <img src="fridgemagnets.jpg" alt="Digital fridge magnets on a grey background">
                 </li>
-                <li class="project-small">
+                <li class="project-small" tabindex="0" onkeydown="keyDown(this)" onkeyup="keyUp(this)">
                     <h3>Leaky Trolley Website</h3>
                     <p>
                         Website for a client
@@ -305,19 +339,19 @@
                     </p>
                     <img src="leaky.jpg" alt="The website made for Leaky Trolley">
                 </li>
-                <li class="project-small">
+                <li class="project-small" tabindex="0">
                     <h3><abbr title="Dungeons and Dragons" role="definition">D&D</abbr> Tools</h3>
                     <p>
-                        Tools for playing <abbr title="Dungeons and Dragons" role="definition">D&D</abbr>
+                        Tools for playing D&D
                         <br>
                         <br>
                         The first website I ever made, actually.
                         <br>
-                        A handful of tools to help with playing <abbr title="Dungeons and Dragons" role="definition">D&D</abbr>, such as procedurally generating towns, people, and potions.
+                        A handful of tools to help with playing D&D such as procedurally generating towns, people, and potions.
                     </p>
                     <img src="dndnpc.jpg" alt="Medieval-looking text displaying information about nonexistent characters">
                 </li>
-                <li class="project-small">
+                <li class="project-small" tabindex="0" onkeydown="keyDown(this)" onkeyup="keyUp(this)">
                     <h3>Shooter Game</h3>
                     <p>
                         College assignment
@@ -331,7 +365,7 @@
         </section>
         <section class="document-section" id="contact-section" role="region">
             <h2>Contact&nbsp;Me</h2>
-            <h3>Dial up my number<a href="https://genius.com/Goldfrapp-ooh-la-la-lyrics" target="_blank">.</a></h3>
+            <h3>Dial up my number<a href="https://genius.com/Goldfrapp-ooh-la-la-lyrics" target="_blank" title="Opens in a new tab">.</a></h3>
             <ul>
                 <li>
                     <h4>Find me</h4>
@@ -343,12 +377,12 @@
                 </li>
                 <li>
                     <h4>Email</h4>
-                    <a href="mailto:JoshuaAGKelley@gmail.com" target="_blank">JoshuaAGKelley@gmail.com</a><br>
-                    <a href="mailto:s5208752@bournemouth.ac.uk" target="_blank">s5208752@bournemouth.ac.uk</a>
+                    <a href="mailto:JoshuaAGKelley@gmail.com" target="_blank" title="Opens in a new tab">JoshuaAGKelley@gmail.com</a><br>
+                    <a href="mailto:s5208752@bournemouth.ac.uk" target="_blank" title="Opens in a new tab">s5208752@bournemouth.ac.uk</a>
                 </li>
                 <li>
                     <h4>Connect</h4>
-                    <a href="https://www.linkedin.com/in/joshuaagkelley" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/joshuaagkelley" target="_blank" title="Opens in a new tab">LinkedIn</a>
                 </li>
                 <li>
                     <h4>Phone</h4>
@@ -362,6 +396,9 @@
         </section>
         <footer>
             <p>Designed and built by Joshua Kelley</p>
+            <a href="https://www.w3.org/WAI/WCAG2AAA-Conformance" title="Explanation of WCAG 2 Level AAA conformance">
+                <img height="32" width="88" src="wcag2AAA-blue.png" alt="Level AAA conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
+            </a>
         </footer>
     </body>
 </html>

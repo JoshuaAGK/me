@@ -52,7 +52,7 @@ h1 {
 
 h2 {
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     color: var(--accent-color);
 }
 
@@ -68,16 +68,20 @@ h4, h5 {
 }
 
 h5 {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 p, a, address {
     font-size: 16px;
 }
 
-abbr {
+dfn {
+    text-decoration: none;
+    font-style: normal;
+    font-size: 16px;
     font-size: inherit;
     font-weight: inherit;
+    color: inherit;
 }
 
 address {
@@ -103,18 +107,21 @@ hr {
 footer {
     width: 100vw;
     height: 100px;
-    text-align: center;
-    opacity: 0.5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
-footer * {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
+footer a {
+    margin-left: 1em;
 }
 
 .txt-high {
     color: var(--accent-color);
+    font-size: 18px;
 }
 
 #intro-section {
@@ -123,7 +130,7 @@ footer * {
 }
 
 #intro-section h1 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.6);
 }
@@ -215,7 +222,7 @@ footer * {
     border: 1px solid var(--light-color);
     border-radius: 3px;
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -263,7 +270,7 @@ footer * {
     height: auto;
     position: fixed;
     z-index: 3;
-    bottom: 100px;
+    bottom: calc(100px - 2em);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -273,19 +280,29 @@ footer * {
     fill: var(--text-color);
 }
 
-#sideNav a:hover path {
-    fill: var(--dark-color);
-}
-
-#sideNav a {
+#sideNav a:not(:last-of-type) {
     width: 1.5em;
     margin-top: 20px;
 }
 
+#sideNav a:last-of-type {
+    width: auto;
+    margin-top: 20px;
+    width: 50%;
+    text-align: center;
+    opacity: 0.5;
+    visibility: hidden;
+    text-decoration: none;
+}
+
+#sideNav:focus-within a:last-of-type{
+    visibility: visible;
+}
+
 @supports (backdrop-filter: none) {
-  #navBar {
-      backdrop-filter: blur(8px);
-  }
+    #navBar {
+        backdrop-filter: blur(8px);
+    }
 }
 
 @supports (-webkit-backdrop-filter: none) {
@@ -304,16 +321,16 @@ footer * {
     text-decoration: none;
 }
 
-#navBar a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
 #navBar .downloadBtn {
     padding: 10px;
     color: var(--light-color);
     border: 1px solid var(--light-color);
     border-radius: 3px;
     margin-right: 30px;
+}
+
+#navBar .downloadBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #skillsList {
@@ -369,31 +386,31 @@ ul {
     font-size: 16px;
 }
 
-#sugmaknuts {
+#experienceWrapper {
     display: grid;
     grid-template-columns: calc(50% - 30px) 60px calc(50% - 30px);
     grid-template-rows: auto 30px auto;
 }
 
-#sugmaknuts > div:nth-of-type(1) {
+#experienceWrapper > div:nth-of-type(1) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-#sugmaknuts > div:nth-of-type(2) {
+#experienceWrapper > div:nth-of-type(2) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 4;
 }
-#sugmaknuts > div:nth-of-type(3) {
+#experienceWrapper > div:nth-of-type(3) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-#sugmaknuts > div:nth-of-type(4) {
+#experienceWrapper > div:nth-of-type(4) {
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 3;
@@ -626,15 +643,20 @@ ul {
     max-width: calc((150px/9*16) - 12px);
 }
 
-.project-small:hover img {
+.project-small:hover img, .keyDetails img {
     filter: blur(2px) brightness(50%);
 }
 
-.project-small:hover h3, .project-small:hover p {
+.project-small:hover h3, .project-small:hover p, .keyDetails h3, .keyDetails p {
     display: block;
 }
 
-
+abbr {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+}
 
 
 
@@ -649,6 +671,10 @@ ul {
     
     body {
         background-color: var(--dark-color);
+    }
+    
+    footer p {
+        color: #AAAAAA;
     }
 
     #downArrow svg {
@@ -681,8 +707,7 @@ ul {
     }
     
     #intro-section h1 {
-        color: white;
-        opacity: 0.5;
+        color: #AAAAAA;
     }
     
     #intro-section h3 {
@@ -701,35 +726,36 @@ ul {
     #navBar a:hover {
         background-color: rgba(var(--accent-values), 0.1);
     }
+
 }
 
 /*Compact*/
 @media only screen and (max-width: 1024px) {
-    #sugmaknuts {
+    #experienceWrapper {
         display: grid;
         grid-template-columns: calc(50% - 30px) 60px calc(50% - 30px);
         grid-template-rows: auto 30px auto 30px auto 30px auto;
     }
     
-    #sugmaknuts > div:nth-of-type(1) {
+    #experienceWrapper > div:nth-of-type(1) {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 2;
     }
-    #sugmaknuts > div:nth-of-type(2) {
+    #experienceWrapper > div:nth-of-type(2) {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 4;
     }
-    #sugmaknuts > div:nth-of-type(3) {
+    #experienceWrapper > div:nth-of-type(3) {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 5;
         grid-row-end: 6;
     }
-    #sugmaknuts > div:nth-of-type(4) {
+    #experienceWrapper > div:nth-of-type(4) {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 7;
@@ -831,4 +857,11 @@ ul {
         margin-right: 10px;
     }
     
+}
+
+@media only screen and (max-width: 450px) {
+    #contact-section li {
+        width: 100%;
+        text-align: center;
+    }
 }

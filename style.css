@@ -145,10 +145,18 @@ hr {
     display: flex;
     justify-content: center;
     border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    background-color: var(--medium-color);
+    background-image: url("computers.jpg");
+    background-size: cover;
+    
 }   
 
 #selfie img {
     height: 100%;
+    object-position: 0 25px;
+    
 }
 
 #descTxt {
@@ -761,6 +769,10 @@ ul {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
+        max-width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
     }   
 
     #descTxt {

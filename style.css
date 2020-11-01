@@ -723,7 +723,7 @@ abbr {
         background-color: rgba(var(--accent-values), 0.1);
     }
     
-    #navBar a:hover {
+    #navBar .downloadBtn:hover {
         background-color: rgba(var(--accent-values), 0.1);
     }
 

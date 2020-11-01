@@ -95,6 +95,7 @@ a {
 hr {
     visibility: hidden;
     height: 50px;
+    width: 100%;
 }
 
 .txt-high {
@@ -117,7 +118,7 @@ hr {
 }
 
 #intro-section p {
-    font-size: min(1.5vw, 18px);
+    font-size: 18px;
     font-weight: 400;
     max-width: 500px;
 }
@@ -129,7 +130,6 @@ hr {
     transform: translate(-50%, 0);
     margin-bottom: 40px;
     width: 80%;
-    min-width: 650px;
     max-width: 900px;
     display: grid;
     grid-template-columns: 200px 30px auto;
@@ -185,7 +185,7 @@ hr {
     border: 1px solid var(--light-color);
     border-radius: 3px;
     margin-right: 10px;
-    font-size: min(1.5vw, 16px);
+    font-size: 16px;
     text-decoration: none;
 }
 
@@ -457,11 +457,16 @@ ul {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    width: calc(100% - 2 * var(--side-padding));
 }
 
 #contact-section li {
     padding: 10px;
     margin: 20px 10px 20px 10px;
+}
+
+#contact-section a {
+    font-size: 16px;
 }
 
 .education-image svg {
@@ -711,40 +716,71 @@ ul {
     }
     
     .project-large-image {
-        width: calc(300px/9*16);
+        width: calc(300px / 9 * 16);
+        max-width: calc(100vw - (2 * var(--side-padding)));
         float: left;
         margin: 0;
         position: relative;
         clear: both;
+        z-index: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
-    
-    
-    .project-large:nth-child(even) .project-large-cover {
-/*
+
+    .project-large-cover, .project-large:nth-child(even) .project-large-cover {
         margin: 0;
         left: 0;
         text-align: left;
         float: left;
-        clear: both;
         top: 0;
-*/
-    }
-
-    .project-large-cover, .project-large:nth-child(even) .project-large-cover {
-        all: initial;
-/*
+        width: auto;
         min-width: 0;
         max-width: 100vw;
-        text-align: left;
-        left: 0;
-        margin: 0;
-*/
-        background-color: green;
+        z-index: 0;
+        position: relative;
+        transform: none;
+        background-color: rgba(0, 0, 0, 0);
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0);
     }
     
-    .project-large-cover, .project-large:nth-child(even) .project-large-cover {
-        
+    .project-large:not(:first-of-type) .project-large-cover {
+        margin-top: 50px;
     }
     
+    #meInfo {
+        grid-template-columns: auto;
+        grid-template-rows: 200px 30px auto;
+    }
+    
+    #meInfo * {
+        border-radius: 30px;
+    }
+    
+    #selfie {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }   
+
+    #descTxt {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    #navBar {
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #navBar a {
+        font-size: 14px;
+    }
+    
+    #navBar .downloadBtn {
+        margin-right: 10px;
+    }
     
 }

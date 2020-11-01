@@ -34,7 +34,6 @@ section {
     padding-left: var(--side-padding);
     padding-right: var(--side-padding);
     box-sizing: border-box;
-    min-height: 50vh;
     padding-top: 4rem;
     z-index: 1;
 }
@@ -44,7 +43,7 @@ section:first-of-type {
 }
 
 section:last-of-type {
-    padding-bottom: 100px;
+    padding-bottom: 0;
 }
 
 h1 {
@@ -485,10 +484,7 @@ ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: calc(100% - 2 * var(--side-padding));
+    width: 100%;
 }
 
 #contact-section li {

@@ -18,48 +18,50 @@
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body onresize="console.log(window.innerWidth)">
-        <div id="sideNav">
-            <a href="https://github.com/JoshuaAGK">
+        <div id="sideNav" role="banner">
+            <a href="https://github.com/JoshuaAGK" role="link">
                 <svg viewBox="0 0 16 16">
+                    <title>GitHub</title>
                     <path fill-rule="evenodd" fill="black" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/joshuaagkelley">
+            <a href="https://www.linkedin.com/in/joshuaagkelley" role="link">
                 <svg viewBox="0 0 48 48">
+                    <title>LinkedIn</title>
                     <g fill="none" fill-rule="evenodd">
                         <path d="M0 4.01A4.01 4.01 0 014.01 0h39.98A4.01 4.01 0 0148 4.01v39.98A4.01 4.01 0 0143.99 48H4.01A4.01 4.01 0 010 43.99V4.01zM19 18.3h6.5v3.266C26.437 19.688 28.838 18 32.445 18 39.359 18 41 21.738 41 28.597V41.3h-7V30.159c0-3.906-.937-6.109-3.32-6.109-3.305 0-4.68 2.375-4.68 6.109V41.3h-7v-23zM7 41h7V18H7v23zm8-30.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" class="background" fill="black"></path>
                     </g>
                 </svg>
             </a>
         </div>
-        <nav id="navBar">
-            <a href="#about-section">About</a>
-            <a href="#experience-section">Experience&nbsp;&<br>Education</a>
-            <a href="#projects-section">Projects</a>
-            <a href="#contact-section">Contact</a>
-            <a class="downloadBtn" href="resume_light" download="Josh's Resume" target="_blank">CV</a>
+        <nav id="navBar" role="navigation">
+            <a href="#about-section" role="link">About</a>
+            <a href="#experience-section" role="link">Experience&nbsp;&<br>Education</a>
+            <a href="#projects-section" role="link">Projects</a>
+            <a href="#contact-section" role="link">Contact</a>
+            <a class="downloadBtn" href="resume_light" download="Josh's Resume" target="_blank" role="link">CV</a>
         </nav>
-        <section class="document-section" id="intro-section">
+        <section class="document-section" id="intro-section" role="region">
             <h1>Hello, my name is</h1>
             <h2>Joshua Kelley</h2>
             <h3>Software Engineering Student</h3>
             <p>Freelance developer, student, tech enthusiast, and official nerd.</p>
             <p>If you need high-quality code made, look no further.</p>
-            <a class="sub-link" href="#contact-section">Contact</a>
-            <a class="sub-link" href="resume_light" download="Josh's Resume" target="_blank">CV</a>
-            <a href="#about-section" id="downArrow">
+            <a class="sub-link" href="#contact-section" role="link">Contact</a>
+            <a class="sub-link" href="resume_light" download="Josh's Resume" target="_blank role="link"">CV</a>
+            <a href="#about-section" id="downArrow" role="button">
                 <svg viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                     <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"/>
                 </svg>
             </a>
         </section>
-        <section class="document-section" id="about-section">
+        <section class="document-section" id="about-section" role="region">
             <h2>About Me</h2>
             <h3>Please allow me to introduce myself<a href="https://genius.com/The-rolling-stones-sympathy-for-the-devil-lyrics" target="_blank">.</a></h3>
             <div id="meInfo">
                 <div id="selfie">
-                    <img src="selfie.png">
+                    <img src="selfie.png" alt="A photograph of me">
                 </div>
                 <div id="descTxt">
                     <p class="txt-high">Hello!</p>
@@ -76,7 +78,7 @@
                     <a href="https://joshuaagk.github.io/me/JoshuaKelley.vcf" download="Joshua Kelley">Download contact</a>
                     <br><br>
                     <h5>Name</h5>
-                    <p>Joshua <abbr title="Joshua Andrew Geoffrey Kelley">AG</abbr> Kelley</p>
+                    <p>Joshua <abbr title="Joshua Andrew Geoffrey Kelley" role="definition">AG</abbr> Kelley</p>
                     <br>
                     <h5>Birthday</h5>
                     <time datetime="2000-08-08">8th August, 2000</time>
@@ -106,7 +108,7 @@
                 </div>
             </div>
         </section>
-        <section class="document-section" id="experience-section">
+        <section class="document-section" id="experience-section" role="region">
             <h2>Experience & Education</h2>
             <h3>See what I've done now<a href="https://genius.com/Passion-pit-cry-like-a-ghost-lyrics" target="_blank">.</a></h3>
             <div id="sugmaknuts">
@@ -142,7 +144,7 @@
                             </div>
                             <div class="education-centre">
                                 <div class="education-image">
-                                    <img src="2xslogo.png">
+                                    <img src="2xslogo.png" alt="2xStream's logo">
                                 </div>
                             </div>
                             <div class="education-right">
@@ -157,7 +159,7 @@
                             </div>
                             <div class="education-centre">
                                 <div class="education-image">
-                                    <img src="tricatlogo.png">
+                                    <img src="tricatlogo.png" alt="Tri Catering Equipment's logo">
                                 </div>
                             </div>
                             <div class="education-right">
@@ -182,7 +184,7 @@
                             </div>
                             <div class="education-centre">
                                 <div class="education-image">
-                                    <img src="bulogo.png">
+                                    <img src="bulogo.png" alt="Bournemouth University's logo">
                                 </div>
                             </div>
                             <div class="education-right">
@@ -198,7 +200,7 @@
                             </div>
                             <div class="education-centre">
                                 <div class="education-image">
-                                    <img src="weylogo.png">
+                                    <img src="weylogo.png" alt="Weymouth College's logo">
                                 </div>
                             </div>
                             <div class="education-right">
@@ -214,7 +216,7 @@
                             </div>
                             <div class="education-centre">
                                 <div class="education-image">
-                                    <img src="thslogo.png">
+                                    <img src="thslogo.png" alt="The Thomas hardye School's Logo logo">
                                 </div>
                             </div>
                             <div class="education-right">
@@ -226,7 +228,7 @@
                 </div>
             </div>
         </section>
-        <section class="document-section" id="projects-section">
+        <section class="document-section" id="projects-section" role="region">
             <h2>Projects</h2>
             <h3>These are a few of my favourite things<a href="https://genius.com/Julie-andrews-my-favorite-things-lyrics" target="_blank">.</a></h3>
             <ul>
@@ -237,7 +239,7 @@
                         <p>In addition to the website, I created the real-time live chat, Twitter timeline, and Google Drive integration, with a custom backend API to manage the site.</p>
                     </div>
                     <div class="project-large-image">
-                        <img src="renault.jpg">
+                        <img src="renault.jpg" alt="The website made for Renault">
                     </div>
                 </li>
                 <li class="project-large">
@@ -246,7 +248,7 @@
                         <p>A Google Chrome extension which injects a script into the timetable viewer webpage, intercepts incoming JSON data, parses that data into a machine-readable calendar format, and downloads it as an .ics file.</p>
                     </div>
                     <div class="project-large-image">
-                        <img src="timetabledownloader.jpg">
+                        <img src="timetabledownloader.jpg" alt="The Chrome Web Store page of my extension">
                     </div>
                 </li>
                 <li class="project-large">
@@ -256,7 +258,7 @@
                         <p>Can be imported into any website with PHP installed.</p>
                     </div>
                     <div class="project-large-image">
-                        <img src="customtimeline.jpg">
+                        <img src="customtimeline.jpg" alt="A list of recent Tweets by the Twitter account @Marvel">
                     </div>
                 </li>
             </ul>
@@ -271,7 +273,7 @@
                         <br>
                         Python scrips for scraping the <a href="https://www.imdb.com/showtimes/">IMDB page</a> for movies at nearby cinemas (such as age ratings and showtimes), then exports as a JSON.
                     </p>
-                    <img src="showtime.jpg">
+                    <img src="showtime.jpg" alt="A segment of code">
                 </li>
                 <li class="project-small">
                     <h3>Colour Clock</h3>
@@ -281,7 +283,7 @@
                         <br>
                         Converts the time of day (HH:MM:SS) to a #hex colour value, and displays the name of the colour.
                     </p>
-                    <img src="colourclock.jpg">
+                    <img src="colourclock.jpg" alt="Large text which reads 'It's midnight blue o'clock' on a blue background">
                 </li>
                 <li class="project-small">
                     <h3>Fridge Magnets</h3>
@@ -291,7 +293,7 @@
                         <br>
                         A virtual fridge for dragging in and playing around with fridge magnets. Comes with some premade Scrabble tiles to drag around.
                     </p>
-                    <img src="fridgemagnets.jpg">
+                    <img src="fridgemagnets.jpg" alt="Digital fridge magnets on a grey background">
                 </li>
                 <li class="project-small">
                     <h3>Leaky Trolley Website</h3>
@@ -301,19 +303,19 @@
                         <br>
                         A blog-style website I was commissioned to create for a local startup 'Leaky Trolley'.
                     </p>
-                    <img src="leaky.jpg">
+                    <img src="leaky.jpg" alt="The website made for Leaky Trolley">
                 </li>
                 <li class="project-small">
-                    <h3><abbr title="Dungeons and Dragons">D&D</abbr> Tools</h3>
+                    <h3><abbr title="Dungeons and Dragons" role="definition">D&D</abbr> Tools</h3>
                     <p>
-                        Tools for playing <abbr title="Dungeons and Dragons">D&D</abbr>
+                        Tools for playing <abbr title="Dungeons and Dragons" role="definition">D&D</abbr>
                         <br>
                         <br>
                         The first website I ever made, actually.
                         <br>
-                        A handful of tools to help with playing <abbr title="Dungeons and Dragons">D&D</abbr>, such as procedurally generating towns, people, and potions.
+                        A handful of tools to help with playing <abbr title="Dungeons and Dragons" role="definition">D&D</abbr>, such as procedurally generating towns, people, and potions.
                     </p>
-                    <img src="dndnpc.jpg">
+                    <img src="dndnpc.jpg" alt="Medieval-looking text displaying information about nonexistent characters">
                 </li>
                 <li class="project-small">
                     <h3>Shooter Game</h3>
@@ -323,11 +325,11 @@
                         <br>
                         An interactive two-player shooter game with powerups. This was something I made for a college assignment in 2016.
                     </p>
-                    <img src="shooter.jpg">
+                    <img src="shooter.jpg" alt="Two spaceships in space, facing each other, with power ups on the screen">
                 </li>
             </ul>
         </section>
-        <section class="document-section" id="contact-section">
+        <section class="document-section" id="contact-section" role="region">
             <h2>Contact&nbsp;Me</h2>
             <h3>Dial up my number<a href="https://genius.com/Goldfrapp-ooh-la-la-lyrics" target="_blank">.</a></h3>
             <ul>

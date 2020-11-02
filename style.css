@@ -36,6 +36,7 @@ section {
     box-sizing: border-box;
     padding-top: 4rem;
     z-index: 1;
+    position: relative;
 }
 
 section:first-of-type {
@@ -130,7 +131,8 @@ footer * {
 
 #intro-section {
     padding-top: 20vh;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: calc(30px + 1em)
 }
 
 #intro-section h1 {
@@ -208,15 +210,6 @@ footer * {
     font-size: 18px;
 }
 
-#experience-section {
-}
-
-
-
-
-
-
-
 .sub-link {
     position: relative;
     top: 30px;
@@ -234,6 +227,7 @@ footer * {
 }
 
 #downArrow {
+    bottom: 0;
     width: 2em;
     height: 2em;
     position: absolute;
@@ -245,6 +239,8 @@ footer * {
 }
 
 #downArrow svg {
+    width: 2em;
+    height: 2em;
     fill: var(--light-color);
 }
 

@@ -105,7 +105,7 @@ hr {
 }
 
 footer {
-    width: 100vw;
+    width: calc(100% - (6 * var(--side-padding)));
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -113,11 +113,15 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: env(safe-area-inset-bottom);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-footer a {
-    margin-left: 1em;
+footer * {
+    margin: 0 0.5em 0 0.5em;
 }
+
 
 .txt-high {
     color: var(--accent-color);

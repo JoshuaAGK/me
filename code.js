@@ -16,7 +16,7 @@ function keyUp(e) {
 }
 
 function moveSelfie(e) {
-    const moveAmount = 20;
+    const moveAmount = 5;
     var x = (e.clientX / window.innerWidth) - 0.5;
     var y = (e.clientY / window.innerHeight) - 0.5;
     var xOffset = x * moveAmount;

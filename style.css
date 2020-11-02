@@ -97,6 +97,7 @@ h3 a {
 
 a {
     font-size: inherit;
+    color: inherit;
 }
 
 hr {
@@ -262,6 +263,10 @@ footer * {
     box-shadow: 0px -20px 30px black;
     overflow: hidden;
     background-color: rgba(var(--accent-values), 0.8);
+}
+
+#compactDetails {
+    display: none;
 }
 
 #sideNav {
@@ -606,7 +611,6 @@ ul {
     height: 150px;
     width: calc(150px/9*16);
     margin: 10px;
-    cursor: help;
     border-radius: 3px;
     border: 1px solid var(--accent-color);
 }
@@ -632,6 +636,11 @@ ul {
 
 .project-small h3 abbr {
     text-decoration: none;
+}
+
+.project-small h3 a {
+    font-size: inherit;
+    text-decoration: underline;
 }
 
 .project-small p {
@@ -775,6 +784,10 @@ abbr {
         display: none;
     }
     
+    #compactDetails {
+        display: initial;
+    }
+    
     #projects-section ul:nth-of-type(2) {
         max-width: 842px;
         width: 100%;
@@ -816,7 +829,7 @@ abbr {
         margin-top: 50px;
     }
     
-    .project-large-cover h4 {
+    .project-large-cover h4, .project-large-cover h4 a {
         color: var(--accent-color);
     }
     

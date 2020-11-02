@@ -311,6 +311,10 @@ footer a {
   }
 }
 
+#hamburgerCheck, #hamburger {
+    display: none;
+}
+
 #navBar a {
     position: relative;
     padding: 10px;
@@ -864,4 +868,85 @@ abbr {
         width: 100%;
         text-align: center;
     }
+}
+
+@media only screen and (max-width: 410px) {
+    #navBar {
+        flex-direction: column;
+        height: auto;
+        z-index: 3;
+        left: -110vw;
+        transition-duration: 0.2s;
+    }
+    
+    #navBar a {
+        margin-right: 0;
+    }
+    
+    #navBar a:first-of-type {
+        margin-top: calc(1em);
+    }
+
+    #navBar .downloadBtn {
+        margin: 10px 0 10px 0;
+    }
+    
+    #hamburgerCheck, #hamburger {
+        display: initial;
+        width: calc(1em + 20px);
+        height: calc(1em + 20px);
+        cursor: pointer;
+        margin: var(--side-padding);
+        border-radius: 3px;
+        box-sizing: border-box;
+        border: 1px solid var(--text-color);
+    }
+    
+    #hamburgerCheck {
+        z-index: 5;
+        opacity: 0;
+        position: fixed;
+    }
+    
+    
+    #hamburgerCheck:checked ~ nav{
+        left: 0;
+    }
+    
+    #hamburger {
+        z-index: 4;
+        position: fixed;
+    }
+    
+    #hamburger div {
+        width: 80%;
+        height: 10%;
+        border-radius: 999px;
+        background-color: var(--text-color);
+        position: absolute;
+        left: 10%;
+        transition-duration: 0.2s;
+    }
+    
+    #hamburger div:nth-of-type(1) {
+        top: 30%;
+    }
+    #hamburger div:nth-of-type(2) {
+        bottom: 30%;
+    }
+    
+    #hamburgerCheck:checked ~ #hamburger div:nth-of-type(1) {
+        top: 45%;
+        transform: rotate(45deg);
+    }
+    
+    #hamburgerCheck:checked ~ #hamburger div:nth-of-type(2) {
+        top: 45%;
+        transform: rotate(-45deg);
+    }
+    
+    
+    
+        
+    
 }

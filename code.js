@@ -16,20 +16,29 @@ function keyUp(e) {
 }
 
 function moveSelfie(e) {
-    const moveAmount = 5;
+    const moveAmount = 10;
     var x = (e.clientX / window.innerWidth) - 0.5;
     var y = (e.clientY / window.innerHeight) - 0.5;
     var xOffset = x * moveAmount;
     var yOffset = y * moveAmount + 25;
     var selfie = document.getElementById("selfie").getElementsByTagName("img")[0];
-    selfie.style.objectPosition = xOffset + "px " + yOffset + "px";
     var background = document.getElementById("selfie");
-    background.style.backgroundPosition = xOffset * -0.75 + "px " + yOffset * -0.75 + "px";
+    
+    if (window.innerWidth > 510) {
+        selfie.style.objectPosition = xOffset + "px " + yOffset + "px";
+        background.style.backgroundPosition = xOffset * -0.75 + "px " + yOffset * -0.75 + "px";
+    } else {
+        selfie.style.objectPosition = "0 25px";
+        background.style.backgroundPosition = "0 0";
+    }
 }
 
-function clearSelfie() {
-    var selfie = document.getElementById("selfie").getElementsByTagName("img")[0];
-    selfie.style.objectPosition = "0 25px";
-    var background = document.getElementById("selfie");
-    background.style.backgroundPosition = "0 0";
+function resize() {
+    if (window.innerWidth < 510) {
+        var selfie = document.getElementById("selfie").getElementsByTagName("img")[0];
+        var background = document.getElementById("selfie");
+        
+        selfie.style.objectPosition = "0 25px";
+        background.style.backgroundPosition = "0 0";
+    }
 }

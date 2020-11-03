@@ -107,7 +107,6 @@ hr {
 }
 
 footer {
-    width: calc(100% - (6 * var(--side-padding)));
     height: 100px;
     display: flex;
     flex-direction: row;
@@ -118,6 +117,7 @@ footer {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
+    padding: 0 1rem 0 1rem;
 }
 
 footer * {

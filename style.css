@@ -122,6 +122,7 @@ footer {
 
 footer * {
     margin: 0 0.5em 0 0.5em;
+    text-align: center;
 }
 
 
@@ -133,6 +134,7 @@ footer * {
 #intro-section {
     padding-top: 20vh;
     min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     padding-bottom: calc(30px + 1em)
 }
 
@@ -954,10 +956,13 @@ abbr {
     #hamburgerCheck:checked ~ #hamburger div:nth-of-type(2) {
         top: 45%;
         transform: rotate(-45deg);
+    }  
+}
+
+@media only screen and (max-width: 370px) {
+    #downArrow {
+        left: initial;
+        right: 2rem;
+        transform: initial;
     }
-    
-    
-    
-        
-    
 }

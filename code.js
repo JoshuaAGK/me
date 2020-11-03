@@ -41,4 +41,11 @@ function resize() {
         selfie.style.objectPosition = "0 25px";
         background.style.backgroundPosition = "0 0";
     }
+    
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + "px");
+}
+
+function onload() {
+    resize();
 }
